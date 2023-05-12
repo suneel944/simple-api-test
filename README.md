@@ -16,9 +16,12 @@ A simple api testing repo demonstrating the ease of api testing using python, up
     - [Pycharm](https://www.jetbrains.com/pycharm/)
 - Install project dependencies
     ```
-    pipenv shell # to create a new virtual environment for the project
-    pipenv install -r ./requirements/requirements.txt # installing requirements from the requirements.txt file
-    pipenv activate # to activate the shell
+    # to create a new virtual environment for the project
+    pipenv shell
+    # installing requirements from the 
+    pipenv install -r ./requirements/requirements.txt  requirements.txt file
+    # to activate the shell
+    pipenv activate
     ```
 
 ## Setting up the docker suite
@@ -54,5 +57,6 @@ A simple api testing repo demonstrating the ease of api testing using python, up
     pytest <relative_.py_test_file_path> --alluredir=allure-results
     -or-
     pytest -n <number_of_parallel_threads> <relative_.py_test_file_path> --alluredir=allure-results
-    -or- pytest -n <number_of_parallel_threads> --alluredir=allure-results
+    -or- 
+    pytest -n <number_of_parallel_threads> --alluredir=allure-results
     ```
