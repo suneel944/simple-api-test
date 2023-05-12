@@ -1,0 +1,7 @@
+{
+    "json_place_holder": {
+        "test": {
+            "base_url": "https://jsonplaceholder.typicode.com/"
+        }
+    }
+}
