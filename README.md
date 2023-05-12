@@ -1,4 +1,5 @@
 ![Build](https://github.com/suneel944/simple-api-test/actions/workflows/tests.yml/badge.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 # Simple API Testing Repo
 A simple api testing repo demonstrating the ease of api testing using python, uplink
