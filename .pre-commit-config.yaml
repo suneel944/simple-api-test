@@ -8,7 +8,7 @@ repos:
     rev: v0.961
     hooks:
       - id: mypy
-        entry: mypy uaf/ tests/unit
+        entry: mypy src/ tests/
         pass_filenames: false
   - repo: https://github.com/psf/black
     rev: 23.3.0
