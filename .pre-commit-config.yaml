@@ -10,8 +10,8 @@ repos:
       - id: mypy
         entry: mypy src/ tests/
         pass_filenames: false
-  # - repo: https://github.com/psf/black
-  #   rev: 23.3.0
-  #   hooks:
-  #     - id: black
-  #       args: [ ".", "-l", "120", "-S" ]
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+      - id: black
+        args: [ ".", "-l", "120", "-S" ]
