@@ -6,20 +6,39 @@ A simple api testing repo demonstrating the ease of api testing using python, up
 - Github CI integration
 - Dockerised
 
-## Running the test
-- Install python version >=3.11
-- Install dependencies
+## Prepping the project
+- [Install python](https://www.python.org/downloads/)
+- [Install pip](https://pip.pypa.io/en/stable/installation/)
+- [Install Docker](https://docs.docker.com/engine/install/)
+- [Install Docker Compose](https://docs.docker.com.zh.xy2401.com/v17.12/compose/install/)
+- Install any IDE of your choice
+    - [Vscode](https://code.visualstudio.com/)
+    - [Pycharm](https://www.jetbrains.com/pycharm/)
+- Install project dependencies
     ```
     pipenv shell # to create a new virtual environment for the project
     pipenv install -r ./requirements/requirements.txt # installing requirements from the requirements.txt file
     pipenv activate # to activate the shell
     ```
+
+## Setting up the docker suite
+- Build the project image using below command
+    ```
+    docker build -t python_test/simple-api-test:latest -f Dockerfile .
+    ```
+- Invoke the allure-docker-service
+    ```
+    docker compose up -d
+    -or-
+    docker compose up -d --build
+    ```
+## Running the test
 - When trying to run, the below tests using allure-service you might encounter permission denied error, to resolve that:
     ```
     sudo chmod 777 allure-reports
     sudo chmod 777 allure-results
     ```
-
+- If you are thinking where the report would be getting stored, it will be stored in the **allure-reports** directory with in the project root
 - To run the test, use the below commands
     ```
     # parallel mode
