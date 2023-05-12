@@ -1,4 +1,4 @@
-name: Test and notify
+name: Test
 
 on:
   workflow_dispatch:
@@ -24,5 +24,11 @@ jobs:
       - name: Build docker image
         run: docker build -t python_test/simple-api-test:latest -f Dockerfile .
 
-      - name: Invoke docker compose and test
-        run: docker compose up -d
+      - name: Invoke docker compose
+        run: docker compose up --build -d
+      
+      - name: Run tests
+        run: docker compose exec pytest-run pytest --alluredir=allure-results
+
+      - name: Stop containers
+        run: docker compose down
