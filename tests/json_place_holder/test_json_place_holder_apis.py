@@ -1,5 +1,3 @@
-import json
-
 from pytest import mark
 
 from src.enums.servers import Servers
