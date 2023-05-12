@@ -23,6 +23,10 @@ A simple api testing repo demonstrating the ease of api testing using python, up
     # to activate the shell
     pipenv activate
     ```
+- To set up the auto formatting prior to code commit run the code once during set up
+    ```
+    pipenv run pre-commit install
+    ```
 
 ## Setting up the docker suite
 - Build the project image using below command
