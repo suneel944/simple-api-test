@@ -1,0 +1,28 @@
+name: Test and notify
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+
+jobs:
+  build-python-and-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        py:
+          - "3.11"
+        os:
+          - ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Build docker image
+        run: docker build -t python_test/simple-api-test:latest -f Dockerfile .
+
+      - name: Invoke docker compose and test
+        run: docker compose up -d
