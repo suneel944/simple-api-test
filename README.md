@@ -1,3 +1,5 @@
+![Build](https://github.com/suneel944/simple-api-test/actions/workflows/tests.yml/badge.svg)
+
 # Simple API Testing Repo
 A simple api testing repo demonstrating the ease of api testing using python, uplink
 
