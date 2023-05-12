@@ -1,8 +1,7 @@
 from pytest import mark
 
 from src.enums.servers import Servers
-from src.service.json_place_holder.jph_service import (JsonPlaceHolder,
-                                                       get_base_url)
+from src.service.json_place_holder.jph_service import JsonPlaceHolder, get_base_url
 from src.utils.file_mainpulation import readJson
 from src.utils.timer_calc import current_time
 
@@ -36,7 +35,7 @@ def test_response_time_of_photos_endpoint():
 def test_specific_user_geo_location(param):
     respnse = request_spec.get_specific_user(num=param)
     data = respnse.json()["address"]["geo"]
-    assert respnse.status_code == 200 and data["lat"] == '-31.8129' and data["lng"] == "62.5342"
+    assert respnse.status_code == 200 and data["lat"] == "-31.8129" and data["lng"] == "62.5342"
 
 
 def test_comment_is_sorted():
